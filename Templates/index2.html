@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hr analysis</title>
+</head>
+<body>
+<div align="center">
+<h2>Information Related To Employee</h2>
+	
+	<form action="{{ url_for('predict')}}"method="post">
+
+			
+		<div>
+		<br>	
+		<label class="description" for="element_1">Department </label>
+		<input id="element_1" name="Department" class="element text small" type="text" maxlength="255" value=""/>
+		</div>
+		<br>
+		<div>
+		<label class="description" for="element_2">Education </label>
+		<input id="element_2" name="Education" class="element text small" type="text" maxlength="255" value=""/>
+		</div>
+		<br>
+		<div>
+		<label class="description" for="element_3">Gender </label>
+		<input id="element_3" name="Gender" class="element text small" type="text" maxlength="255" value=""/>
+		</div>
+		<br>
+		<div>
+		<label class="description" for="element_4">No_of_trainings </label>
+		<input id="element_4" name="No_of_trainings" class="element text small" type="text" maxlength="255" value=""/>
+		</div>
+		<br>
+		<div>
+		<label class="description" for="element_5">previous_year_rating </label>
+		<input id="element_5" name="previous_year_rating" class="element text small" type="text" maxlength="255" value=""/>
+		</div>
+		<br>
+		<div>
+		<label class="description" for="element_6">KPIs_met</label>
+		<input id="element_6" name="KPIs_met" class="element text small" type="text" maxlength="255" value=""/>
+		</div>
+		<br>
+		<div>
+		<label class="description" for="element_7">Awards_won </label>
+		<input id="element_7" name="Awards_won" class="element text small" type="text" maxlength="255" value=""/>
+		</div>
+		<br>
+		<div>
+		<label class="description" for="element_8">Avg_training_score </label>
+		<input id="element_8" name="Avg_training_score" class="element text small" type="text" maxlength="255" value=""/>
+		</div>
+
+		
+		<br>
+		<div>
+			 <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+		</div>
+   <br>
+   {{ prediction_text }}
+
+	</form>
+</div>
+<div>
+	<text rows="10" size>
+		<br>
+		Department:(Inputs 'Analytics' or 'Finance' or 'HR' or 'Legal' or 'Operations' or 'Procurement' or 'R&D' or 'Sales & Marketing' or 'Technology)'
+		<br>
+		Education :(Inputs 'Masters' or 'Bachelors' or 'Below Secondary')
+		<br>
+		Gender :(Inputs 'm' or 'f')
+		<br>
+		No_of_trainings :(Input Any number between 1-9)
+		<br>
+		previous_year_rating :(Input Any number between 1-5)
+		<br>
+		KPIs_met:(Input 'Yes' or 'No')
+		<br>
+		Awards_won:(Input 'Yes' or 'No')
+		<br>
+		Avg_training_score:(Input Any number between 37-99)
+	</text>
+
+
+</div>
+</body>
+</html>
